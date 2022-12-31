@@ -3,6 +3,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 const title = "Blog";
 const description = "Lists of my blog posts";
+
+const blogPosts = (await Astro.glob("./blog/*.md")).sort(
+    (a, b) =>
+        new Date(b.frontmatter.date).valueOf() -
+        new Date(a.frontmatter.date).valueOf()
+);
 ---
 
 <BaseLayout title={title} description={description}>
@@ -11,4 +17,15 @@ const description = "Lists of my blog posts";
         Here you can see lists of my blog posts. I post about my thoughts,
         technology, life and so on.
     </p>
+    {
+        blogPosts.map((post) => (
+            <article>
+                <h2>
+                    <a href={post.url}>{post.frontmatter.title}</a>
+                </h2>
+                <p>{post.frontmatter.description}</p>
+                <time>{post.frontmatter.date}</time>
+            </article>
+        ))
+    }
 </BaseLayout>
