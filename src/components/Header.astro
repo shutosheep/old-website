@@ -1,12 +1,27 @@
+---
+import { Icon } from "astro-icon";
+---
+
 <header>
     <nav>
         <a href="/">Home</a>
         <a href="/blog">Blog</a>
     </nav>
+    <div class="links">
+        <a href="https://github.com/shutosheep" rel="external noopener" target="_blank">
+            <Icon class="icon" pack="mdi" name="github" />
+        </a>
+        <a href="mailto:shuto@shutotamaoka.xyz">
+            <Icon class="icon" pack="mdi" name="email-outline" />
+        </a>
+    </div>
 </header>
 
 <style>
     header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         margin-top: 1em;
     }
 
@@ -17,5 +32,15 @@
 
     header nav a:not(:last-child) {
         margin-right: 1em;
+    }
+
+    header .links {
+        display: flex;
+        gap: .5em;
+    }
+
+    header .links .icon {
+        width: 2em;
+        height: 2em;
     }
 </style>
