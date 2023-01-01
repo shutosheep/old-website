@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import { formatDate } from "../utils/FormatDate";
 
 const {
     frontmatter: { title, description, date },
@@ -8,6 +9,6 @@ const {
 
 <BaseLayout title={title} description={description}>
     <h1>{title}</h1>
-    <time>{new Date(date).toLocaleDateString("en-US")}</time>
+    <time>{formatDate(date)}</time>
     <slot />
 </BaseLayout>
