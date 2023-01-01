@@ -18,24 +18,15 @@ const blogPosts = (await Astro.glob("./blog/*.md")).sort(
         Here you can see lists of my blog posts. I post about my thoughts,
         technology, life and so on.
     </p>
-    <div class="grid">
-        {
-            blogPosts.map((post) => (
-                <article>
-                    <h2>
-                        <a href={post.url}>{post.frontmatter.title}</a>
-                    </h2>
-                    <p>{post.frontmatter.description}</p>
-                    <time>{formatDate(post.frontmatter.pubDate)}</time>
-                </article>
-            ))
-        }
-    </div>
-</BaseLayout>
-
-<style>
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+    {
+        blogPosts.map((post) => (
+            <article>
+                <h2>
+                    <a href={post.url}>{post.frontmatter.title}</a>
+                </h2>
+                <p>{post.frontmatter.description}</p>
+                <time>{formatDate(post.frontmatter.pubDate)}</time>
+            </article>
+        ))
     }
-</style>
+</BaseLayout>
