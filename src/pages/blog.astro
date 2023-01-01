@@ -24,7 +24,11 @@ const blogPosts = (await Astro.glob("./blog/*.md")).sort(
                     <a href={post.url}>{post.frontmatter.title}</a>
                 </h2>
                 <p>{post.frontmatter.description}</p>
-                <time>{post.frontmatter.date}</time>
+                <time>
+                    {new Date(post.frontmatter.date).toLocaleDateString(
+                        "en-US"
+                    )}
+                </time>
             </article>
         ))
     }

@@ -8,6 +8,6 @@ const {
 
 <BaseLayout title={title} description={description}>
     <h1>{title}</h1>
-    <time>{date}</time>
+    <time>{new Date(date).toLocaleDateString("en-US")}</time>
     <slot />
 </BaseLayout>
