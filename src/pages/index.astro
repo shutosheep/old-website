@@ -17,13 +17,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 music. My mother language is Japanese but I also speak English.
             </p>
         </div>
-        <img
-            class="profile"
-            src="/images/profile.webp"
-            width="250px"
-            height="250px"
-            alt="Profile picture of me"
-        />
+        <div>
+            <img
+                class="profile"
+                src="/images/profile.webp"
+                width="250px"
+                height="250px"
+                alt="Profile picture of me"
+            />
+        </div>
     </div>
 </BaseLayout>
 
@@ -36,5 +38,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         margin-top: 1em;
         margin-left: 1.5em;
         border-radius: 50%;
+    }
+
+    @media (max-width: 48rem) {
+        .intro {
+            margin-top: 1em;
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+
+        .intro .profile {
+            margin-top: 0;
+            margin-left: 0;
+        }
     }
 </style>
