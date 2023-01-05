@@ -69,7 +69,7 @@ to put this in my `.xinitrc` file.
 ```sh
 setxkbmap -option caps:escape &
 
-pkill dwmblocks || dwmblocks &
+pgrep dwmblocks || dwmblocks &
 exec dwm
 ```
 
