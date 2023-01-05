@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/BlogPage.astro'
+layout: '@layouts/BlogPage.astro'
 title: My website uses Zola
 pubDate: 2022-08-04
 description: My website now uses Zola because I'm too lazy to write plain html
