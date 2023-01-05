@@ -77,4 +77,4 @@ Now I can use my caps lock key as an escape key.
 
 ## References
 
-[https://wiki.archlinux.org/title/Xorg/Keyboard_configuration](https://wiki.archlinux.org/title/Xorg/Keyboard_configuration)
+[Xorg/Keyboard configuration](https://wiki.archlinux.org/title/Xorg/Keyboard_configuration)
