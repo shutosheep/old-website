@@ -2,6 +2,7 @@
 import Meta from "@components/Meta.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
+import '../styles/global.css';
 
 export interface Props {
     title?: string;
@@ -24,49 +25,5 @@ const { title, description } = Astro.props;
         </main>
 
         <Footer />
-
-        <style is:global>
-            :root {
-                --bg-color: #1b1b1b;
-                --fg-color: #fff;
-            }
-
-            @media (prefers-color-scheme: light) {
-                :root {
-                    --bg-color: #fff;
-                    --fg-color: #1b1b1b;
-                }
-            }
-
-            body {
-                max-width: 50rem;
-                margin: auto;
-                padding: 15px;
-                font-family: -apple-system, BlinkMacSystemFont, avenir next,
-                    avenir, segoe ui, helvetica neue, helvetica, Cantarell,
-                    Ubuntu, roboto, noto, arial, sans-serif;
-                color: var(--fg-color);
-                background-color: var(--bg-color);
-            }
-
-            a {
-                color: var(--fg-color);
-            }
-
-            ul {
-                padding-left: 25px;
-            }
-
-            pre.astro-code {
-                padding: .5em;
-                border-radius: .3em;
-            }
-
-            @media screen and (max-width: 50rem) {
-                body {
-                    font-size: 90%;
-                }
-            }
-        </style>
     </body>
 </html>
