@@ -38,4 +38,8 @@ pre.astro-code {
     body {
         font-size: 90%;
     }
+
+    ul {
+        padding-left: 20px;
+    }
 }
