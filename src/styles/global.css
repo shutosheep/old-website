@@ -34,6 +34,12 @@ pre.astro-code {
     border-radius: .3em;
 }
 
+main p img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
 @media screen and (max-width: 50rem) {
     body {
         font-size: 90%;
