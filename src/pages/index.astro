@@ -1,6 +1,25 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import profile from "@images/profile.webp";
+import Repo from "@components/Repo.astro";
+
+type pinnedRepos = {
+    owner: string;
+    repo: string;
+    link: string;
+    description: string;
+    image: string;
+    language: string;
+    languageColor: string;
+    stars: number;
+    forks: number;
+};
+
+const pinnedRepos = await fetch(
+    "https://gh-pinned-repos.egoist.dev/?username=shutosheep"
+).then(async (response) => {
+    return response.json();
+});
 ---
 
 <BaseLayout>
@@ -27,6 +46,21 @@ import profile from "@images/profile.webp";
             />
         </div>
     </div>
+    <h2>My Github repos</h2>
+    <section class="repos">
+        {
+            pinnedRepos.map((repo) => {
+                return (
+                    <Repo
+                        repo={repo.repo}
+                        link={repo.link}
+                        description={repo.description}
+                        language={repo.language}
+                    />
+                );
+            })
+        }
+    </section>
 </BaseLayout>
 
 <style>
@@ -43,6 +77,12 @@ import profile from "@images/profile.webp";
         border-radius: 50%;
     }
 
+    .repos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
     @media (max-width: 48rem) {
         .intro {
             margin-top: 1em;
@@ -53,6 +93,10 @@ import profile from "@images/profile.webp";
         .intro div:last-child {
             margin-top: 0;
             margin-left: 0;
+        }
+
+        .repos {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 </style>

@@ -1,0 +1,38 @@
+---
+import { Icon } from 'astro-icon';
+
+export interface Props {
+    repo: string;
+    link: string;
+    description: string;
+    language: string;
+}
+
+const { repo, link, description, language } = Astro.props;
+---
+
+<a href={link} target="_blank" rel="external noopener">
+    <div>
+        <h3>{repo}</h3>
+        <p>{description}</p>
+        <p>{language}</p>
+    </div>
+</a>
+
+<style>
+    a {
+        text-decoration: none;
+        transition-duration: 0.2s;
+    }
+
+    a:hover {
+        transform: scale(1.05);
+        transition-duration: 0.2s;
+    }
+
+    a div {
+        padding: .5rem 1rem;
+        border: 1px solid var(--fg-color);
+        border-radius: .75rem;
+    }
+</style>
