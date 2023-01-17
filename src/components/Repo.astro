@@ -1,26 +1,42 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from "astro-icon";
 
 export interface Props {
     repo: string;
     link: string;
     description: string;
     language: string;
+    stars: number;
 }
 
-const { repo, link, description, language } = Astro.props;
+const { repo, link, description, language, stars } = Astro.props;
 ---
 
 <a href={link} target="_blank" rel="external noopener">
-    <div>
-        <h3>{repo}</h3>
-        <p>{description}</p>
-        <p>{language}</p>
-    </div>
+    <h3>{repo}</h3>
+    <p>{description}</p>
+    <p>
+        <span>
+            {language}
+        </span>
+        {
+            stars != 0 ? (
+                <span>
+                    <Icon name="ph:star" />
+                    {stars}
+                </span>
+            ) : (
+                <span />
+            )
+        }
+    </p>
 </a>
 
 <style>
     a {
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--fg-color);
+        border-radius: 0.75rem;
         text-decoration: none;
         transition-duration: 0.2s;
     }
@@ -30,9 +46,14 @@ const { repo, link, description, language } = Astro.props;
         transition-duration: 0.2s;
     }
 
-    a div {
-        padding: .5rem 1rem;
-        border: 1px solid var(--fg-color);
-        border-radius: .75rem;
+    a p:last-child {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    [astro-icon] {
+        width: 1rem;
+        height: 1rem;
+        vertical-align: text-top;
     }
 </style>
