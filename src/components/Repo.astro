@@ -8,9 +8,10 @@ export interface Props {
     description: string;
     language: string;
     stars: number;
+    forks: number;
 }
 
-const { owner, repo, link, description, language, stars } = Astro.props;
+const { owner, repo, link, description, language, stars, forks } = Astro.props;
 const userName = 'shutosheep';
 ---
 
@@ -32,6 +33,16 @@ const userName = 'shutosheep';
                 <span>
                     <Icon name="ph:star" />
                     {stars}
+                </span>
+            ) : (
+                <span />
+            )
+        }
+        {
+            forks != 0 ? (
+                <span>
+                    <Icon name="ph:git-fork" />
+                    {forks}
                 </span>
             ) : (
                 <span />
