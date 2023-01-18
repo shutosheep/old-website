@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon";
 
 export interface Props {
+    owner: string;
     repo: string;
     link: string;
     description: string;
@@ -9,11 +10,18 @@ export interface Props {
     stars: number;
 }
 
-const { repo, link, description, language, stars } = Astro.props;
+const { owner, repo, link, description, language, stars } = Astro.props;
+const userName = 'shutosheep';
 ---
 
 <a href={link} target="_blank" rel="external noopener">
-    <h3>{repo}</h3>
+    {
+        owner == userName ? (
+            <h3>{repo}</h3>
+        ) : (
+            <h3>{owner + "/" + repo}</h3>
+        )
+    }
     <p>{description}</p>
     <p>
         <span>

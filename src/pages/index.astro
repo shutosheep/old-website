@@ -52,6 +52,7 @@ const pinnedRepos = await fetch(
             pinnedRepos.map((repo) => {
                 return (
                     <Repo
+                        owner={repo.owner}
                         repo={repo.repo}
                         link={repo.link}
                         description={repo.description}
