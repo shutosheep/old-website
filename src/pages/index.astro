@@ -25,6 +25,15 @@ const pinnedRepos = await fetch(
 <BaseLayout>
     <div class="intro">
         <div>
+            <img
+                class="profile"
+                src={profile}
+                width="250px"
+                height="250px"
+                alt="Profile picture of me"
+            />
+        </div>
+        <div>
             <h1>Hi I'm Shuto 👋</h1>
             <p>
                 I'm a random 19 years old Japanese guy who loves computers and
@@ -35,15 +44,6 @@ const pinnedRepos = await fetch(
                 and exams. In my free time I like to write some code, listen to
                 music.
             </p>
-        </div>
-        <div>
-            <img
-                class="profile"
-                src={profile}
-                width="250px"
-                height="250px"
-                alt="Profile picture of me"
-            />
         </div>
     </div>
     <h2>My Github repos</h2>
@@ -69,14 +69,15 @@ const pinnedRepos = await fetch(
 <style>
     .intro {
         display: flex;
+        margin-top: 1.5rem;
     }
 
     .intro div:last-child {
-        margin-top: 1.5em;
-        margin-left: 1em;
+        margin-left: 2rem;
+        align-self: center;
     }
 
-    .intro div:last-child img {
+    .intro div:first-child img {
         border-radius: 50%;
     }
 
@@ -88,13 +89,12 @@ const pinnedRepos = await fetch(
 
     @media (max-width: 48rem) {
         .intro {
-            margin-top: 1em;
+            margin-top: 0;
             flex-direction: column-reverse;
             text-align: center;
         }
 
         .intro div:last-child {
-            margin-top: 0;
             margin-left: 0;
         }
 
