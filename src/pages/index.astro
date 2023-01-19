@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import profile from "@images/profile.webp";
 import Repo from "@components/Repo.astro";
+import LinkIcons from "@components/LinkIcons.astro";
 
 type pinnedRepos = {
     owner: string;
@@ -44,6 +45,7 @@ const pinnedRepos = await fetch(
                 and exams. In my free time I like to write some code, listen to
                 music.
             </p>
+            <LinkIcons />
         </div>
     </div>
     <h2>My Github repos</h2>
@@ -92,6 +94,10 @@ const pinnedRepos = await fetch(
             margin-top: 0;
             flex-direction: column-reverse;
             text-align: center;
+        }
+
+        .intro div:first-child {
+            margin-top: 1rem;
         }
 
         .intro div:last-child {

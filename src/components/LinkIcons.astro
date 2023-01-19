@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div>
+    <a href="https://github.com/shutosheep" rel="external noopener" target="_blank">
+        <Icon name="mdi:github" aria-label="Github" />
+    </a>
+    <a href="mailto:shuto@shutotamaoka.xyz">
+        <Icon class="icon" name="mdi:email-outline" aria-label="Email" />
+    </a>
+    <a href="/rss.xml">
+        <Icon class="icon" name="mdi:rss" aria-label="RSS" />
+    </a>
+</div>
+
+<style>
+    a {
+        text-decoration: none;
+    }
+
+    [astro-icon] {
+        width: 2rem;
+        height: 2rem;
+    }
+</style>
