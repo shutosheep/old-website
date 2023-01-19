@@ -7,17 +7,6 @@ import { Icon } from "astro-icon";
         <a href="/">Home</a>
         <a href="/blog">Blog</a>
     </nav>
-    <div class="links">
-        <a href="https://github.com/shutosheep" rel="external noopener" target="_blank">
-            <Icon class="icon" name="mdi:github" aria-label="Github" />
-        </a>
-        <a href="mailto:shuto@shutotamaoka.xyz">
-            <Icon class="icon" name="mdi:email-outline" aria-label="Email" />
-        </a>
-        <a href="/rss.xml">
-            <Icon class="icon" name="mdi:rss" aria-label="RSS" />
-        </a>
-    </div>
 </header>
 
 <style>
@@ -40,11 +29,6 @@ import { Icon } from "astro-icon";
     header .links {
         display: flex;
         gap: .5em;
-    }
-
-    [astro-icon] {
-        width: 2rem;
-        height: 2rem;
     }
 
     @media screen and (max-width: 50rem) {
