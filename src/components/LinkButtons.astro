@@ -6,7 +6,7 @@ import wiby from "@images/wiby.gif";
 import debian from "@images/button-2.gif";
 ---
 
-<p class="buttons">
+<div>
     <a href="https://landchad.net/" rel="external noopener" target="_blank">
         <img
             src={landchad}
@@ -42,10 +42,12 @@ import debian from "@images/button-2.gif";
             alt="debian.org"
         />
     </a>
-</p>
+</div>
 
-<style>
-    .buttons a {
-        text-decoration: none;
+<style lang="scss">
+    div {
+        a {
+            text-decoration: none;
+        }
     }
 </style>

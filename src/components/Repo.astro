@@ -51,23 +51,25 @@ const userName = 'shutosheep';
     </p>
 </a>
 
-<style>
+<style lang="scss">
     a {
         padding: 0.5rem 1rem;
         border: 1px solid var(--fg-color);
         border-radius: 0.75rem;
         text-decoration: none;
         transition-duration: 0.2s;
-    }
 
-    a:hover {
-        transform: scale(1.05);
-        transition-duration: 0.2s;
-    }
+        &:hover {
+            transform: scale(1.05);
+            transition-duration: 0.2s;
+        }
 
-    a p:last-child {
-        display: flex;
-        gap: 0.5rem;
+        p {
+            &:last-child {
+                display: flex;
+                gap: 0.5rem;
+            }
+        }
     }
 
     [astro-icon] {

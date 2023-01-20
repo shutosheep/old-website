@@ -1,5 +1,4 @@
 ---
-import { Icon } from "astro-icon";
 ---
 
 <header>
@@ -9,28 +8,22 @@ import { Icon } from "astro-icon";
     </nav>
 </header>
 
-<style>
+<style lang="scss">
     header {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 1em;
-    }
+        margin-top: 1rem;
 
-    header nav a {
-        font-weight: bold;
-        font-size: 1.17em;
-    }
+        nav {
+            a {
+                font-weight: bold;
+                font-size: 1.17rem;
 
-    header nav a:not(:last-child) {
-        margin-right: 1em;
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                }
+            }
+        }
     }
-
-    header .links {
-        display: flex;
-        gap: .5em;
-    }
-
     @media screen and (max-width: 50rem) {
         header {
             margin-top: 0;

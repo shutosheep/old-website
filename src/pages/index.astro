@@ -68,21 +68,24 @@ const pinnedRepos = await fetch(
     </section>
 </BaseLayout>
 
-<style>
+<style lang="scss">
     .intro {
         display: flex;
         margin-top: 1.5rem;
-    }
 
-    .intro div:last-child {
-        margin-left: 2rem;
-        align-self: center;
-    }
+        div {
+            &:first-child {
+                img {
+                    border-radius: 50%;
+                }
+            }
 
-    .intro div:first-child img {
-        border-radius: 50%;
+            &:last-child {
+                margin-left: 2rem;
+                align-self: center;
+            }
+        }
     }
-
     .repos {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -94,14 +97,16 @@ const pinnedRepos = await fetch(
             margin-top: 0;
             flex-direction: column;
             text-align: center;
-        }
 
-        .intro div:first-child {
-            margin-top: 1rem;
-        }
+            div {
+                &:first-child {
+                    margin-top: 1rem;
+                }
 
-        .intro div:last-child {
-            margin-left: 0;
+                &:last-child {
+                    margin-left: 0;
+                }
+            }
         }
 
         .repos {
