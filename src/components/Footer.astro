@@ -1,11 +1,13 @@
 ---
 import LinkButtons from "@components/LinkButtons.astro";
+
+const url = import.meta.env.SITE;
 ---
 
 <footer>
     <LinkButtons />
     <p>
-        <a href="/">https://shutotamaoka.xyz</a>
+        <a href="/">{url}</a>
     </p>
 </footer>
 
