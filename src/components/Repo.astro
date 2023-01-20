@@ -12,17 +12,11 @@ export interface Props {
 }
 
 const { owner, repo, link, description, language, stars, forks } = Astro.props;
-const userName = 'shutosheep';
+const userName = "shutosheep";
 ---
 
 <a href={link} target="_blank" rel="external noopener">
-    {
-        owner == userName ? (
-            <h3>{repo}</h3>
-        ) : (
-            <h3>{owner + "/" + repo}</h3>
-        )
-    }
+    {owner == userName ? <h3>{repo}</h3> : <h3>{owner + "/" + repo}</h3>}
     <p>{description}</p>
     <p>
         <span>
@@ -64,10 +58,13 @@ const userName = 'shutosheep';
             transition-duration: 0.2s;
         }
 
-        p {
-            &:last-child {
+        p:last-child {
+            display: flex;
+            gap: .5rem;
+
+            span {
                 display: flex;
-                gap: 0.5rem;
+                gap: .25rem;
             }
         }
     }
@@ -75,6 +72,5 @@ const userName = 'shutosheep';
     [astro-icon] {
         width: 1rem;
         height: 1rem;
-        vertical-align: text-top;
     }
 </style>
