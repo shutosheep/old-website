@@ -6,19 +6,24 @@ export interface Props {
 
 const { title, description } = Astro.props;
 
-const baseTitle = "Shuto's website";
+const defaultTitle = "Shuto's website";
 const defaultDescription = "Shuto Tamaoka's personal website";
 const generator = Astro.generator;
 const url = new URL(Astro.url.pathname, Astro.site);
 ---
 
+<meta charset="utf-8" />
 <meta name="generator" content={generator} />
 <link rel="canonical" href={url} />
-<title>{title ? `${title} | ${baseTitle}` : baseTitle}</title>
+<title>{title ? `${title} | ${defaultTitle}` : defaultTitle}</title>
 <meta
     name="description"
     content={description ? description : defaultDescription}
 />
 <link rel="icon" href="/favicon.ico" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta charset="utf-8" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={defaultTitle} />
+<meta property="og:url" content={url} />
+<meta property="og:title" content={title ? `${title} | ${defaultTitle}` : defaultTitle} />
+<meta property="og:description" content={description ? description : defaultDescription} />
