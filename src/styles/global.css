@@ -1,6 +1,7 @@
 :root {
     --bg-color: #1b1b1b;
     --fg-color: #fff;
+    --code-color: deeppink;
 }
 
 @media (prefers-color-scheme: light) {
@@ -25,7 +26,11 @@ a {
     color: var(--fg-color);
 }
 
-pre.astro-code {
+main code {
+    color: var(--code-color);
+}
+
+main pre.astro-code {
     padding: .5em;
     border-radius: .3em;
 }
