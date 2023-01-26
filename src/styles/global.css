@@ -25,10 +25,6 @@ a {
     color: var(--fg-color);
 }
 
-ul {
-    padding-left: 25px;
-}
-
 pre.astro-code {
     padding: .5em;
     border-radius: .3em;
@@ -45,7 +41,8 @@ main p img {
         font-size: 90%;
     }
 
-    ul {
-        padding-left: 20px;
+    ul,
+    ol {
+        padding-left: 25px;
     }
 }
