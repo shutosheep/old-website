@@ -4,7 +4,7 @@ import profile from "@images/profile.png";
 import Repo from "@components/Repo.astro";
 import LinkIcons from "@components/LinkIcons.astro";
 
-type pinnedRepos = {
+type PinnedRepo = {
     owner: string;
     repo: string;
     link: string;
@@ -19,7 +19,7 @@ type pinnedRepos = {
 const pinnedRepos = await fetch(
     "https://gh-pinned-repos.egoist.dev/?username=shutosheep"
 ).then(async (response) => {
-    return response.json();
+    return (await response.json()) as PinnedRepo[];
 });
 ---
 
