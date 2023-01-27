@@ -4,6 +4,6 @@ const formatOptions : object = {
     day: "numeric",
 }
 
-export function formatDate(date: string): string {
+export function formatDate(date: Date): string {
     return new Date(date).toLocaleDateString("en-us", formatOptions);
 }
