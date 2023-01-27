@@ -4,8 +4,6 @@ import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import { formatDate } from "@utils/FormatDate";
 
-export const prerender = true;
-
 export async function getStaticPaths() {
     const blogPosts = await getCollection('blog');
 
