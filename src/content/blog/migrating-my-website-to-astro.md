@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/BlogPage.astro"
 title: Migrating my website to Astro
 pubDate: 2023-01-08
 description: I was lazy but rebuilt my website with Astro

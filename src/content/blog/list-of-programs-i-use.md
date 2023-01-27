@@ -1,5 +1,4 @@
 ---
-layout: '@layouts/BlogPage.astro'
 title: List of programs I use
 pubDate: 2022-08-06
 description: I list my programs I use

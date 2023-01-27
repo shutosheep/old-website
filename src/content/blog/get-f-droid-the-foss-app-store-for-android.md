@@ -1,5 +1,4 @@
 ---
-layout: '@layouts/BlogPage.astro'
 title: Get F-Droid the FOSS app store for Android
 pubDate: 2022-12-04
 description: You should try the FOSS app store F-droid

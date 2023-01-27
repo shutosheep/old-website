@@ -1,5 +1,4 @@
 ---
-layout: '@layouts/BlogPage.astro'
 title: Remap Caps Lock key on Linux
 pubDate: 2022-12-07
 description: Just my note on how to remap Caps Lock key

@@ -1,5 +1,4 @@
 ---
-layout: '@layouts/BlogPage.astro'
 title: First Blog
 pubDate: 2022-06-18
 description: Hello world!
