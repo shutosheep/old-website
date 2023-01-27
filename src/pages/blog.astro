@@ -1,12 +1,13 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
-import { formatDate } from "@utils/FormatDate";
 import { getCollection } from "astro:content";
+import { formatDate } from "@utils/FormatDate";
+import { SortBlogPosts } from "@utils/SortBlogPosts";
 
 const title = "Blog";
 const description = "Lists of my blog posts";
 
-const blogPosts = await getCollection('blog');
+const blogPosts = SortBlogPosts(await getCollection('blog'));
 ---
 
 <BaseLayout title={title} description={description}>
