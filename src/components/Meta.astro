@@ -1,5 +1,5 @@
 ---
-import profile from "@images/profile.png";
+import og from "@images/og.png";
 
 export interface Props {
     title?: string;
@@ -12,7 +12,7 @@ const defaultTitle = "Shuto's website";
 const defaultDescription = "Shuto Tamaoka's personal website";
 const generator = Astro.generator;
 const url = new URL(Astro.url.pathname, Astro.site);
-const ogImage = new URL(profile, Astro.site?.origin!);
+const ogImage = new URL(og, Astro.site?.origin!);
 ---
 
 <meta charset="utf-8" />
