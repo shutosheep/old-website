@@ -1,0 +1,59 @@
+:root {
+    --bg-color: #fff;
+    --fg-color: #1b1b1b;
+    --code-color: deeppink;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #111;
+        --fg-color: #fff;
+    }
+}
+
+body {
+    max-width: 50rem;
+    margin: auto;
+    padding: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next,
+        avenir, segoe ui, helvetica neue, helvetica, Cantarell,
+        Ubuntu, roboto, noto, arial, sans-serif;
+    color: var(--fg-color);
+    background-color: var(--bg-color);
+}
+
+a {
+    color: var(--fg-color);
+}
+
+main {
+    & > p {
+        & > code {
+            color: var(--code-color);
+        }
+
+        & > img {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+        }
+    }
+
+    & >pre {
+        padding: .5rem;
+        border-radius: .25rem;
+    }
+}
+
+@media screen and (max-width: 50rem) {
+    body {
+        font-size: 90%;
+    }
+
+    main {
+        ul,
+        ol {
+            padding-left: 25px;
+        }
+    }
+}
