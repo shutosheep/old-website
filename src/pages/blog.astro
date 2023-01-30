@@ -23,7 +23,9 @@ const blogPosts = SortBlogPosts(await getCollection('blog'));
                     <a href={`/blog/${post.slug}`}>{post.data.title}</a>
                 </h2>
                 <p>{post.data.description}</p>
-                <time>{formatDate(post.data.pubDate)}</time>
+                <time datetime={post.data.pubDate.toISOString()}>
+                    {formatDate(post.data.pubDate)}
+                </time>
             </article>
         ))
     }

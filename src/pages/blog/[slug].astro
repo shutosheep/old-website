@@ -23,6 +23,8 @@ const { Content } = await post.render();
 
 <BaseLayout title={post.data.title} description={post.data.description}>
     <h1>{post.data.title}</h1>
-    <time>{formatDate(post.data.pubDate)}</time>
+    <time datetime={post.data.pubDate.toISOString()}>
+        {formatDate(post.data.pubDate)}
+    </time>
     <Content />
 </BaseLayout>
