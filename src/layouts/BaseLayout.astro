@@ -7,10 +7,9 @@ import "@styles/global.scss";
 export interface Props {
     title?: string;
     description?: string;
-    name?: string;
 }
 
-const { title, description, name } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -21,17 +20,9 @@ const { title, description, name } = Astro.props;
     <body>
         <Header />
 
-        {
-            name != undefined ? (
-                <main class={name}>
-                    <slot />
-                </main>
-            ) : (
-                <main>
-                    <slot />
-                </main>
-            )
-        }
+        <main>
+            <slot />
+        </main>
 
         <Footer />
     </body>

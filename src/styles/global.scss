@@ -1,15 +1,12 @@
 :root {
     --bg-color: #fff;
     --fg-color: #1b1b1b;
-    --link-color: royalblue;
-    --code-color: deeppink;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --bg-color: #111;
         --fg-color: #fff;
-        --link-color: skyblue;
     }
 }
 
@@ -29,16 +26,8 @@ a {
     color: var(--fg-color);
 }
 
-main.blogpage {
-    a {
-        color: var(--link-color);
-    }
-
+main {
     p {
-        code {
-            color: var(--code-color);
-        }
-
         img {
             display: block;
             margin: auto;
@@ -61,7 +50,7 @@ main.blogpage {
         font-size: 90%;
     }
 
-    main.blogpage {
+    main {
         ul,
         ol {
             padding-left: 25px;
