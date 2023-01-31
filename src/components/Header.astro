@@ -3,22 +3,22 @@
         <a href="/">Home</a>
         <a href="/blog">Blog</a>
         <a href="/links">Links</a>
+        <a href="/donate">Donate</a>
     </nav>
 </header>
 
 <style lang="scss">
     header {
-        display: flex;
         margin-top: 1rem;
 
         nav {
+            display: flex;
+            justify-content: center;
+
             a {
                 font-weight: bold;
-                font-size: 1.17rem;
-
-                &:not(:last-child) {
-                    margin-right: 1rem;
-                }
+                font-size: 1.25rem;
+                margin: 0 .75rem;
             }
         }
     }

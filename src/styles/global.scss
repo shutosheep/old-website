@@ -35,6 +35,10 @@ main {
         }
     }
 
+    code {
+        overflow-wrap: break-word;
+    }
+
     pre {
         padding: .5rem;
         border-radius: .25rem;
