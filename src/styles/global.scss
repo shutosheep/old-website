@@ -9,6 +9,7 @@
     :root {
         --bg-color: #111;
         --fg-color: #fff;
+        --link-color: skyblue;
     }
 }
 
@@ -19,6 +20,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, avenir next,
         avenir, segoe ui, helvetica neue, helvetica, Cantarell,
         Ubuntu, roboto, noto, arial, sans-serif;
+    line-height: 1.3;
     color: var(--fg-color);
     background-color: var(--bg-color);
 }
@@ -47,6 +49,10 @@ main.blogpage {
     pre {
         padding: .5rem;
         border-radius: .25rem;
+    }
+
+    blockquote {
+        font-style: italic;
     }
 }
 
