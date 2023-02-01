@@ -4,6 +4,9 @@ title: Links
 description: Lists of useful links
 ---
 
+Here are links which you can find me online. ~~(Only Github though)~~
+I've also included other people's website and blog links which you might find it interseting to see.
+
 ## My links
 
 - [Github](https://github.com/shutosheep) - This is where I put my software projects
